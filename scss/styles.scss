@@ -1,0 +1,12 @@
+@import 'normalize';
+@import 'mixins';
+
+* {
+	box-sizing: border-box;
+}
+body {
+	background: linear-gradient(51deg, #31e479, #4ec3ff) no-repeat;
+	background-size: cover;
+	height: 100vh;
+	font-family: 'Open Sans';
+}
