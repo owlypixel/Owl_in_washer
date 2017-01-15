@@ -579,6 +579,27 @@ body {
   position: relative;
 }
 
+.outer.active:before {
+  -webkit-animation: 0.7s linear infinite circle-spin;
+          animation: 0.7s linear infinite circle-spin;
+  -webkit-animation-fill-mode: forwards;
+}
+
+.outer:before {
+  top: 0;
+  left: 0;
+  border-width: 3.33333px;
+  content: " ";
+  width: 45px;
+  height: 45px;
+  display: block;
+  border-radius: 50%;
+  border: 10px solid white;
+  position: absolute;
+  border-color: #0095ff transparent transparent transparent;
+  pointer-events: none;
+}
+
 .outer .dial {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -604,6 +625,10 @@ body {
   -webkit-transform: translateY(2px);
       -ms-transform: translateY(2px);
           transform: translateY(2px);
+}
+
+.outer .dial.active {
+  color: #0095ff;
 }
 
 .outer .dial i {
@@ -646,6 +671,28 @@ body {
 .outer span:nth-of-type(4) {
   left: -12px;
   top: 59px;
+}
+
+@-webkit-keyframes circle-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .pp {
