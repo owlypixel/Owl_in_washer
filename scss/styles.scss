@@ -95,6 +95,48 @@ body {
   		
   	}
   }
+  .bottom{
+  	display: flex;
+  	position: absolute;
+  	bottom: 0;
+  	height: 50px;
+  	width: 100%;
+  	border-top: 3px solid #9096A5;
+  	box-shadow: inset 0px 1px 0px 0px #C3C7CF, 0px -1px 0px 0px #C3C7CF ;
+  	.lside, .rside{
+  		display: inline-block;
+  		height: 100%;
+  	}
+  	.lside:before, .rside:before{
+  		content: '';
+  		position: absolute;
+  		top: 0;
+  		height: 3px;
+  		background: rgba(252,252,252,0);
+  		background: linear-gradient(to right, rgba(252,252,252,0) 0%, rgba(247,248,249,0.46) 25%, rgba(242,244,245,1) 50%, rgba(248,247,246,0.38) 82%, rgba(252,248,247,0) 100%);
+  	}
+  	.lside{
+  		width: 67%;
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		border-right: 3px solid #A3A9BC;
+  		&:before{
+  			left: 0;
+  			width: 67%;
+  		}
+  	}
+  	.rside{
+  		width: 33%;
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		&:before{
+  			right: 0;
+  			width: 33%;
+  		}
+  	}
+  }
  
 }
 
@@ -124,7 +166,7 @@ body {
 	    border-radius: 50%;
 	    border: 10px solid white;
 	    position: absolute;
-	    border-color: #0095ff transparent transparent transparent;
+	    border-color: #0095ff #fcd000 #AE63E4 #47CF73;
 	    pointer-events:none;
 	}
 	.dial{
@@ -148,7 +190,7 @@ body {
 			transform: translateY(2px);
 		}	
 		&.active{
-				color: #0095ff;
+			color: #0095ff;
 		}	
 		
 		i{

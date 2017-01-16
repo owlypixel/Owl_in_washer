@@ -560,6 +560,69 @@ body {
   background-image: radial-gradient(circle at top center, white, #969FA8);
 }
 
+.washer .bottom {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  border-top: 3px solid #9096A5;
+  box-shadow: inset 0px 1px 0px 0px #C3C7CF, 0px -1px 0px 0px #C3C7CF;
+}
+
+.washer .bottom .lside, .washer .bottom .rside {
+  display: inline-block;
+  height: 100%;
+}
+
+.washer .bottom .lside:before, .washer .bottom .rside:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 3px;
+  background: rgba(252, 252, 252, 0);
+  background: linear-gradient(to right, rgba(252, 252, 252, 0) 0%, rgba(247, 248, 249, 0.46) 25%, #f2f4f5 50%, rgba(248, 247, 246, 0.38) 82%, rgba(252, 248, 247, 0) 100%);
+}
+
+.washer .bottom .lside {
+  width: 67%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 3px solid #A3A9BC;
+}
+
+.washer .bottom .lside:before {
+  left: 0;
+  width: 67%;
+}
+
+.washer .bottom .rside {
+  width: 33%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.washer .bottom .rside:before {
+  right: 0;
+  width: 33%;
+}
+
 .outer {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -596,7 +659,7 @@ body {
   border-radius: 50%;
   border: 10px solid white;
   position: absolute;
-  border-color: #0095ff transparent transparent transparent;
+  border-color: #0095ff #fcd000 #AE63E4 #47CF73;
   pointer-events: none;
 }
 
