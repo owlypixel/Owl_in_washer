@@ -623,6 +623,49 @@ body {
   width: 33%;
 }
 
+.washer .middle {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 245px;
+  width: 100%;
+  position: absolute;
+  top: 85px;
+  left: 0;
+}
+
+.washer .middle .door {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  border: 3px solid #575965;
+  background: #ececef;
+  background: linear-gradient(to bottom, #ececef 0%, #8e919a 100%);
+}
+
+.washer .middle .door .inner-ring {
+  height: 170px;
+  width: 170px;
+  border-radius: 50%;
+  background: #868a93;
+  background: linear-gradient(to bottom, #868a93 0%, #e4e4e4 100%);
+}
+
 .outer {
   display: -webkit-flex;
   display: -ms-flexbox;

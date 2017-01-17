@@ -137,6 +137,35 @@ body {
   		}
   	}
   }
+  .middle{
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	height: 245px;
+  	width: 100%;
+  	position: absolute;
+  	top: 85px;
+  	left: 0;
+  	.door{
+  		display: flex;
+  		align-items: center;
+  		justify-content: center;
+  		width: 240px;
+  		height: 240px;
+  		border-radius: 50%;
+  		border: 3px solid #575965;
+  		background: rgba(236,236,239,1);
+  		background: linear-gradient(to bottom, rgba(236,236,239,1) 0%, rgba(142,145,154,1) 100%);
+  		.inner-ring{
+  			height: 170px;
+  			width: 170px;
+  			border-radius: 50%;
+  			background: rgba(134,138,147,1);
+  			background: linear-gradient(to bottom, rgba(134,138,147,1) 0%, rgba(228,228,228,1) 100%);
+  		}
+  	}
+
+  }
  
 }
 
