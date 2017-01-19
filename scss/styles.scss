@@ -147,9 +147,12 @@ body {
   	top: 85px;
   	left: 0;
   	.door{
+  		box-shadow: inset 0px 4px 0px -1px #E9E9EB, inset 0px 8px 1px -1px #fff;
   		display: flex;
   		align-items: center;
   		justify-content: center;
+  		position: relative;
+  		overflow: hidden;
   		width: 240px;
   		height: 240px;
   		border-radius: 50%;
@@ -157,12 +160,27 @@ body {
   		background: rgba(236,236,239,1);
   		background: linear-gradient(to bottom, rgba(236,236,239,1) 0%, rgba(142,145,154,1) 100%);
   		.inner-ring{
-  			height: 170px;
-  			width: 170px;
+  			box-shadow: 0px -4px 2px -1px #fff;
+  			height: 190px;
+  			width: 190px;
   			border-radius: 50%;
   			background: rgba(134,138,147,1);
   			background: linear-gradient(to bottom, rgba(134,138,147,1) 0%, rgba(228,228,228,1) 100%);
+  			
   		}
+  		.handle{
+  			top: 50%;
+  			transform: translateY(-50%);
+  			right: 12px;
+  			position: absolute;
+  			border-radius: 85px 0 0 85px;
+  			height: 85px;
+  			width: 43px;
+  			box-shadow: inset 7px 2px 2px -6px #fff;
+  			background: rgba(206,207,212,1);
+  			background: linear-gradient(to bottom, rgba(206,207,212,1) 0%, #acaeb5 100%);
+  		}
+
   	}
 
   }
@@ -223,6 +241,7 @@ body {
 		}	
 		
 		i{
+			user-select: none;
 			text-shadow: 0px 1px 2px white;
 
 		}
