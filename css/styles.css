@@ -624,15 +624,6 @@ body {
 }
 
 .washer .middle {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   height: 245px;
   width: 100%;
   position: absolute;
@@ -652,6 +643,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   overflow: hidden;
   width: 240px;
   height: 240px;
@@ -683,6 +679,17 @@ body {
   box-shadow: inset 7px 2px 2px -6px #fff;
   background: #cecfd4;
   background: linear-gradient(to bottom, #cecfd4 0%, #acaeb5 100%);
+}
+
+.washer .middle .owl {
+  position: absolute;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 200px;
 }
 
 .outer {
