@@ -631,54 +631,49 @@ body {
   left: 0;
 }
 
-.washer .middle .door {
-  box-shadow: inset 0px 4px 0px -1px #E9E9EB, inset 0px 8px 1px -1px #fff;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
+.washer .middle .backside {
+  position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  overflow: hidden;
-  width: 240px;
-  height: 240px;
   border-radius: 50%;
-  border: 3px solid #575965;
-  background: #ececef;
-  background: linear-gradient(to bottom, #ececef 0%, #8e919a 100%);
+  width: 245px;
+  height: 245px;
 }
 
-.washer .middle .door .inner-ring {
-  box-shadow: 0px -4px 2px -1px #fff;
-  height: 190px;
-  width: 190px;
-  border-radius: 50%;
-  background: #868a93;
-  background: linear-gradient(to bottom, #868a93 0%, #e4e4e4 100%);
+.washer .middle .door {
+  margin: 0 auto;
+  width: 245px;
+  height: 245px;
 }
 
-.washer .middle .door .handle {
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 12px;
-  position: absolute;
-  border-radius: 85px 0 0 85px;
-  height: 85px;
-  width: 43px;
-  box-shadow: inset 7px 2px 2px -6px #fff;
-  background: #cecfd4;
-  background: linear-gradient(to bottom, #cecfd4 0%, #acaeb5 100%);
+.washer .middle .door .st0 {
+  fill: none;
+  stroke: url(#inner_1_);
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+
+.washer .middle .door .st1 {
+  fill: none;
+  stroke: url(#door_1_);
+  stroke-width: 20;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-miterlimit: 10;
+}
+
+.washer .middle .door .st2 {
+  fill: #FFFFFF;
+}
+
+.washer .middle .door .st3 {
+  fill: none;
+  stroke: #636571;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
 }
 
 .washer .middle .owl {
