@@ -149,22 +149,93 @@ body {
   		border-radius: 50%;
   		width: 245px;
   		height: 245px;
+  		background: #494949;
+  		z-index: 1;
+  		box-shadow: inset 0 0 1px 7px #B0B7C1;
+  		&:after{
+  			content: '';
+  			position: absolute;
+  			width: 15px;
+  			height: 50px;
+  			    background-image: repeating-linear-gradient(to left, #aaa59f 0%, #54514c 50%, #54514c 60%, #f7f6f2 70%, #f7f6f2 79%, #54514c 100%);
+  			border: 2px solid #4E4F54;
+  			left: 0px;
+  			top: 50%;
+  			border-radius: 20%;
+  			transform: translateY(-50%);
+  		}
   	}
   	.door{
-  		margin: 0 auto;
+  		position: absolute;
+  		@include absolute-centered;
   		width: 245px;
   		height: 245px;
+  		z-index: 3;
+  		transform: translate(-50%, -50%) perspective(3500px) rotateY(180deg);
+  		transform-origin: 1% 100%;
   		.st0{fill:none;stroke:url(#inner_1_);stroke-width:10;stroke-miterlimit:10;}
   		.st1{fill:none;stroke:url(#door_1_);stroke-width:20;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
   		.st2{fill:#FFFFFF;}
   		.st3{fill:none;stroke:#636571;stroke-width:2;stroke-miterlimit:10;}
-
+		&:before{
+			@include absolute-centered;
+			content: '';
+			position: absolute;
+			background: #d8e7e6;
+			width: 195px;
+			height: 195px;
+			border-radius: 50%;
+			z-index: -1;
+			opacity: 0.7;
+		}
+		.mount{
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 50px;
+			background: #a1a2ab;
+			border: 2px solid #4E4F54;
+			left: 0px;
+			top: 50%;
+			border-radius: 20%;
+			transform: translateY(-50%);
+			&:before{
+				content: '';
+				position: absolute;
+				bottom: 15%;
+				left: 35%;
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background: white;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				top: 15%;
+				left: 35%;
+				width: 5px;
+				height: 5px;
+				border-radius: 50%;
+				background: white;
+			}
+		}
+		.dropflare{
+			box-shadow: inset 20px 0px 5px white;
+			@include absolute-centered;
+			position: absolute;
+			width: 195px;
+			height: 195px;
+			border-radius: 50%;
+			opacity: 0.5;
+		}
   	}
   	.owl{
   		position: absolute;
   		height: 200px;
   		@include absolute-centered;
   		width: 200px;
+  		z-index: 2;
   	}
 
   }
@@ -273,6 +344,147 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.lwing {
+	animation: shake-left-wing 4s infinite;
+	transform-origin: 68% 11%;
+}
+.rwing {
+	animation: shake-right-wing 4s infinite;
+	transform-origin: 34% 9%;
+}
+.rleg {
+	animation: angry-foot 4s infinite;
+}
+.lleg {
+	animation: angry-foot 4s infinite;
+	animation-delay: 3s;
+}
+.rear {
+	animation: right-ear 4s infinite;
+    transform-origin: 0% 100%;
+}
+.lear {
+	animation: left-ear 4s infinite;
+    transform-origin: 100% 100%;
+}
+.leye, .reye {
+	animation: blink 5s infinite;
+	transform-origin: 0px;
+}
+.pupil {
+	animation: look-aside 10s infinite alternate;
+	transform-origin: 50% 50%;
+}
+
+@keyframes shake-left-wing {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(120deg);
+	}
+	15% {
+		transform: rotate(100deg);
+	}
+	20% {
+		transform: rotate(120deg);
+	}
+	25% {
+		transform: rotate(100deg);
+	}
+	30% {
+		transform: rotate(120deg);
+	}
+	35% {
+		transform: rotate(100deg);
+	}
+	45% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes shake-right-wing {
+	0% {
+		transform: rotate(0deg);
+	}
+	50% {
+		transform: rotate(-5deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+@keyframes angry-foot {
+	0% {
+		transform: translateY(0px);
+	}
+	5% {
+		transform: translateY(-5px);
+	}
+	10% {
+		transform: translateY(0px);
+	}
+	15% {
+		transform: translateY(-5px);
+	}
+	20% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+@keyframes right-ear {
+	0% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(30deg);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes left-ear {
+	0% {
+		transform: rotate(0deg);
+	}
+	30% {
+		transform: rotate(-30deg);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+@keyframes blink {
+	40% {
+		transform: scaleY(1);
+	}
+	45% {
+		transform: scaleY(0.1);
+	}
+	50% {
+		transform: scaleY(1);
+	}
+}
+@keyframes look-aside {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(50deg);
+	}
+	40% {
+		transform: rotate(50deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
 }
 
 .pp{
