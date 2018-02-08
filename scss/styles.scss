@@ -581,6 +581,11 @@ body {
 	animation-fill-mode: forwards;
 }
 
+// --------transform-box-fix---------
+.lwing, .rwing, .rleg, .lleg, .rear, .lear, .leye, .reye, .pupil, .lflitter, .rflitter{
+  transform-box: fill-box;
+}   
+
 @keyframes shake-left-wing {
 	0% {
 		transform: rotate(0deg);
